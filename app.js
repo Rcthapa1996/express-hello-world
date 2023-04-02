@@ -4,6 +4,19 @@ const port = process.env.PORT || 3001;
 
 app.get("/", (req, res) => res.type('html').send(html));
 
+// const express = require('express')
+// const app = express()
+
+app.get('/hello', function (req, res) {
+  res.send('Hello World')
+})
+
+app.get('/data', function (req, res) {
+  res.send([{ id: 1, name: "Ram" }, { id: 2, name: "Vishal" }, { id: 3, name: "Tarique" }, { id: 4, name: "JP" }, { id: 5, name: "Abhishek" }])
+})
+
+// app.listen(3000)
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
